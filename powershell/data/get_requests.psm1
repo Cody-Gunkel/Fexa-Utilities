@@ -39,7 +39,7 @@ Function Get-FexaData
     {
         $Local:URI = "https://" + $Local:URI + ".fexa.io/api/ev1/" + $Local:Fexa_Type + "/" + $FexaID
 
-        $Local:Fexa_Data = Invoke-WebRequest -Uri $Local:URI -Method GET -WebSession $Global:WebSession
+        $Local:Fexa_Data = Invoke-WebRequest -Uri $Local:URI -Method GET -WebSession $Global:Fexa_Session -Headers $Global:Fexa_Headers
 
         If ($Fexa_Data.StatusCode -eq 200)
         {
@@ -154,7 +154,7 @@ Function Search-FexaData
     Try {
         $Local:URI = "https://" + $Local:URI + ".fexa.io/api/ev1/" + $Local:Fexa_Type + "filter=" + $Local:FormattedFilters
 
-        $Local:Fexa_Data = Invoke-WebRequest -Uri $URI -Method GET -WebSession $Global:WebSession
+        $Local:Fexa_Data = Invoke-WebRequest -Uri $URI -Method GET -WebSession $Global:Fexa_Session
 
         If ($Fexa_Data.StatusCode -eq 200)
         {

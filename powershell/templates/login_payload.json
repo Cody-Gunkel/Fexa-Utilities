@@ -1,0 +1,9 @@
+{
+    "user": {
+        "email": "",
+        "password": "",
+        "remember_me": 1
+    },
+    "source": "desktop_app",
+    "authenticity_token": ""
+}
