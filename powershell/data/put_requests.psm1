@@ -43,7 +43,7 @@ Function Set-FexaStatus
     Try {
         $Local:URI = "https://" + $Local:URI + ".fexa.io/api/ev1/" + $Local:Fexa_Type + "/" + $Fexa_ID + "/update_status/" + $Updated_Status
 
-        $Local:Fexa_Data = Invoke-WebRequest -Uri $Local:URI -Method PUT -WebSession $Global:Fexa_Session -Headers $Global:Fexa_Headers
+        $Local:Fexa_Data = Invoke-WebRequest -Uri $Local:URI -Method PUT -WebSession $Global:Fexa_Session
         
         If ($Fexa_Data.StatusCode -eq 200)
         {

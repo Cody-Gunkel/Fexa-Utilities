@@ -48,10 +48,9 @@ Function New-FexaLogin
     # Sets the Fexa_Headers to allow JSON to be sent/received
     [String]$Local:Fexa_Email = $Local:Fexa_Login.Username
     $Global:Fexa_Session = $Fexa_Session
-    $Global:Fexa_Headers = @{
-        "content-type"="application/json";
-        "accept"="application/json";
-    }
+    $Global:Fexa_Session.Headers.'content-type' = "application/json"
+    $Global:Fexa_Session.Headers.'accept' = "application/json"
+    
     $Local:Login_Payload = $null
     $Local:Fexa_Login = $null
     
