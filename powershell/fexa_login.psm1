@@ -77,7 +77,8 @@ Function Get-FexaToken
         # Used Abovem will split and find the specific login token needed to authenticate
         Get-FexaToken -SplitResponse $Local:SplitResponse -Token "csrf-token"
     #>
-    param(
+    param
+    (
         [Parameter(Mandatory)]
         [Array]$SplitResponse,
 

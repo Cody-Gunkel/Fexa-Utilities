@@ -1,0 +1,5 @@
+Import-Module '.\powershell\fexa_login.psm1'
+Import-Module '.\powershell\data\fexa_types.psm1'
+Import-Module '.\powershell\data\get_requests.psm1'
+Import-Module '.\powershell\data\post_requests.psm1'
+Import-Module '.\powershell\data\put_requests.psm1'
