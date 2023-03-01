@@ -19,12 +19,14 @@ Function Test-FexaType
 
     Switch ($Type)
     {
-        "workorder"  {Return "workorders"            }
-        "assignment" {Return "assignments"           }
-        "visit"      {Return "visits"                }
-        "sub_quote"  {Return "subcontractor_quotes"  }
-        "sub_invoice"{Return "subcontractor_invoices"}
-        default      {Return $null                   }
+        "workorder"     {Return "workorders"                                }
+        "assignment"    {Return "assignments"                               }
+        "visit"         {Return "visits"                                    }
+        "sub_quote"     {Return "subcontractor_quotes"                      }
+        "sub_invoice"   {Return "subcontractor_invoices"                    }
+        "webhook_types" {Return "webhook_configurations/webhook_event_types"}
+        "webhook_config"{Return "webhook_configurations"                    }
+        default         {Return $null                                       }
     }    
 }
 
